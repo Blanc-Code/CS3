@@ -1,0 +1,31 @@
+body {
+	background-image:url(images/Productivity.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+h1 {
+	text-align:center;
+	font-family:Comic Sans MS;
+	background-color:#00FFFF;
+	border-color:blue;
+	border-style:dotted;
+	border-width:2px;
+	width:250px;
+	padding:10px 15px;
+	margin-bottom: 20px;
+}
+p {
+	text-align:justified;
+	font-style:italic;
+	background-color:hsl(348 83% 47%);
+	border-color:black;
+	border-style:dashed solid double none;
+	border-width:3px;
+	padding:20px;
+	width:500px;
+}
+span {
+	font-weight:bold;
+	color:rgb(246,235,97);
+	margin:0px 5px 0px 2px;
+}
