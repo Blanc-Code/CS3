@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DECIDE</title>
+		<meta charset"UTF-8">
+		<meta name="author" content="Julius Albert B.Go">
+		<link rel="stylesheet" type="text/css" href="Css/ChoiceStyle.css">
+	</head>
+	<body>
+		<header id="Menu">
+			<a href="1Choice.html" id="Logo"><img src="Images/Logo.png" alt="Logo" width="80" height="60"></a>
+		</header>
+		<div>
+			<p id="Choice">Press The Right Button</p>
+			<hr>
+			<button id="Red" onclick="document.getElementById('Choice').innerHTML='Lol,<span style=color:red>YOU DIED</span>, Everyone Knows Red Is Bad';document.getElementById('Red').innerHTML='Get Rekt';document.getElementById('Blue').style.display='none';document.getElementById('Retry').style.display='block'">Press the Blue</button>
+			<button id="Blue" onclick="document.getElementById('Choice').innerHTML='Ok, you&rsquo;re <span style=color:blue>safe</span>, Thank you for the beta test!';document.getElementById('Blue').innerHTML='You Win';document.getElementById('Red').style.display='none';document.getElementById('Retry').style.display='block'">Press the Red</button>
+			<button style="display:none" id="Retry" onclick="document.getElementById('Choice').innerHTML='Press The Right Button';document.getElementById('Red').innerHTML='Press the Blue';document.getElementById('Red').style.display='inline';document.getElementById('Blue').innerHTML='Press the Red';document.getElementById('Blue').style.display='inline';document.getElementById('Retry').style.display='none'">Retry?</button>
+		</div>
+	</body>
+</html>

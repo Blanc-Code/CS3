@@ -1,0 +1,22 @@
+#Menu{
+	position:sticky;
+}
+#Logo{
+	float:left;
+	top:5px;
+	left:5px;
+}
+div{
+	clear:left;
+	background-color:orange;
+	height:100px;
+	width:400px;
+}
+#Red{
+	background-color:red;
+	color:maroon;
+}
+#Blue{
+	background-color:blue;
+	color:navy;
+}
