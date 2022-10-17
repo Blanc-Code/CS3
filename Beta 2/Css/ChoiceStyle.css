@@ -1,0 +1,26 @@
+#Menu{
+	position:sticky;
+}
+#Logo{
+	float:left;
+	top:5px;
+	left:5px;
+}
+#Game{
+	clear:left;
+	background-color:orange;
+	height:100px;
+	width:400px;
+}
+#Left{
+	background-color:red;
+	color:maroon;
+}
+#Right{
+	background-color:blue;
+	color:navy;
+}
+.Result{
+	background-color:#90EE90;
+	color:green;
+}
