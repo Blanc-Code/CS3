@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DECIDE</title>
+		<meta charset"UTF-8">
+		<meta name="author" content="Julius Albert B.Go">
+		<link rel="stylesheet" type="text/css" href="Css/ChoiceStyle.css">
+	</head>
+	<body>
+		<script src="Javascript/ChoiceStyle.js">
+		</script>
+		<script>
+			function Red(){
+				document.getElementById('Choice').innerHTML="Lol,<span style=color:red>YOU DIED</span>, Everyone Knows Red Is Bad";
+				document.getElementById('Left').innerHTML="Get Rekt";
+			}
+			function Blue(){
+				document.getElementById('Choice').innerHTML="Ok, you&rsquo;re <span style=color:blue>safe</span>, Thank you for the beta test!";
+				document.getElementById('Right').innerHTML="You Win";
+			}
+			function Restart(){
+				document.getElementById('Choice').innerHTML='Press The Right Button';
+				document.getElementById('Left').innerHTML='Press the Blue';
+				document.getElementById('Right').innerHTML='Press the Red';
+			}
+		</script>
+		<header id="Menu">
+			<a href="Homepage.html" id="Logo"><img src="Images/Logo.png" alt="Logo" width="80" height="60"></a>
+		</header>
+		<hr>
+		<div>
+			<p id="Choice">Press The Right Button</p>
+			<hr>
+			<button id="Left" onclick="Red();L_Choice()">Press the Blue</button>
+			<button id="Right" onclick="Blue();R_Choice()">Press the Red</button>
+			<button style="display:none" id="L_Result" class="Result" onclick="Restart();Retry()">Retry?</button>
+			<button style="display:none" id="R_Result" class="Result" onclick="Continue()">Go</button>
+		</div>
+	</body>
+</html>
