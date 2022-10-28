@@ -1,0 +1,68 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	background-color:black;
+	background-image: url('../images/Back.jpg');
+}
+p{
+	font-size:20px;
+	text-align:justify;
+	color:white;
+}
+a{
+	color:orange;
+}
+a:visited{
+	color:lightblue;
+}
+hr{
+	background-color:orange;
+}
+h2{
+	color:cyan;
+	height:3px;
+}
+h1{
+	color:orange;
+}
+article{
+	background-color:rgba(128,128,128,0.5);
+}
+article:hover{
+	background-color:rgba(128,128,128,1);
+}
+#Menu{
+	position:sticky;
+	top:0;
+	background-color:cyan;
+}
+.Menu{
+	display:inline;
+	color:orange;
+}
+#Article1{
+	height:330px;
+	overflow:auto;
+}
+#Article2{
+	width:730px;
+	float:left;
+	right:100px;
+	overflow:auto;
+	height:550px;
+	margin:0px 10px;
+}
+img{
+	margin:10px;
+}
+#Img1{
+	float:right;
+}
+#List{
+	float:left;
+	width:730px;
+	color:white;
+	height:550px;
+	margin:0px 10px;
+}
