@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Switch</title>
+		<meta charset="UTF-8">
+		<meta name="author" subject="Julius Albert B. Go">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			#Link1{
+				font-size:50px;
+				text-decoration:none;
+			}
+			#Link1:link {
+				background-color:rgba(255,110,199,0.5);
+				color:rgba(169,64,100,0.5);
+			}
+			#Link1:visited {
+				background-color:rgba(255,209,220,0.5);
+				color:rgba(255,0,255,0.5);
+			}
+			#Link1:hover {
+				background-color:rgba(255,110,199,1);
+				color:rgba(169,64,100,1);
+			}
+			#Link1:active {
+				background-color:rgba(255,209,220,1);
+				color:rgba(255,0,255,1);
+			}
+			#Link2 {
+				font-size:50px;
+				text-decoration:none;
+			}
+			#Link2:link {
+				background-color:rgba(221,160,221,0.5);
+				color:rgba(138,43,226,0.5);
+			}
+			#Link2:visited {
+				background-color:rgba(153,50,204,0.5);
+				color:rgba(230,230,250,0.5);
+			}
+			#Link2:hover {
+				background-color:rgba(221,160,221,1);
+				color:rgba(138,43,226,1);
+			}
+			#Link2:active {
+				background-color:rgba(153,50,204,1);
+				color:rgba(230,230,250,1);
+			}
+			#Div1 {
+				border-style:solid;
+				width:300px;
+				height:300px;
+			}
+			#Div1:target {
+				background-color:red;
+				color:blue;
+			}
+			#Div2 {
+				border-style:solid;
+				width:300px;
+				height:300px;
+			}
+			#Div2:target {
+				border-style:dotted;
+				border-width:10px;
+				border-color:green;
+				background-color:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<a id="Link1" href="#Div1">Link one</a>
+		<a id="Link2" href="#Div2">Link two</a>
+		<br>
+		<div id="Div1">Div 1</div>
+		<br>
+		<br>
+		<div id="Div2">Div 2</div>
+	</body>
+</html>
