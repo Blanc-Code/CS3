@@ -1,0 +1,187 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	background-color:blue;
+	background-image: url('../images/Back.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+}
+article p{
+	font-family:sans-serif;
+	font-size:20px;
+	color:white;
+}
+article{
+	padding:16px;
+}
+a:hover{
+	color:lightblue;
+}
+hr{
+	background-color:orange;
+}
+h2{
+	color:cyan;
+}
+h1{
+	color:orange;
+}
+main{
+	background-color:rgba(128,128,128,0.5);
+	margin:auto;
+	width:900px;
+}
+main:hover{
+	background-color:rgba(128,128,128,1);
+}
+nav{
+	position:sticky;
+	top:0;
+	overflow:auto;
+	background-color:cyan;
+}
+img{
+	margin:10px;
+}
+#Img1{
+	float:right;
+}
+header{
+	overflow:hidden;
+	background-color: #333;
+	font-family:Times New Roman;
+}
+footer{
+	width:900px;
+	height:500px;
+	background-color:black;
+	margin:auto;
+}
+#twitter{
+	background: url('sprite.png') no-repeat 0 0;
+	width:100px;
+	height:100px;
+}
+#facebook{
+	
+}
+nav a{
+	color:orange;
+}
+header a{
+	color:blue;
+}
+nav a, header a{
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.drop{
+	float:left;
+	overflow:hidden;
+}
+.drop button{
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+.drop:hover button{
+	background-color:red;
+}
+.dropdown{
+	display: none;
+	position:fixed;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	z-index: 1;
+}
+.dropdown a{
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown a:hover{
+	background-color:#ddd;
+}
+.drop:hover .dropdown, .dropdown:hover{
+	display:block;
+}
+aside{
+	border-style:solid;
+	float:right;
+	width:450px;
+}
+#side a{
+	padding: 14px 16px;
+	text-align:center;
+}
+#side{
+	border-style:solid;
+}
+#Body a, #Body p{
+	display:none;
+	margin:auto;
+}
+#Body{
+	border-style:solid;
+}
+#Magic:target a{
+	display:inline-block;
+}
+#Martial:target a{
+	display:inline-block;
+}
+#Ability:target a{
+	display:inline-block;
+}
+#World:target a{
+	display:inline-block;
+}
+#Mage:target a, #Mage:target p{
+	display:block;
+}
+#Spell:target a, #Spell:target p{
+	display:block;
+}
+#Method:target a, #Method:target p{
+	display:block;
+}
+#Cultivator:target a, #Cultivator:target p{
+	display:block;
+}
+#Cultivation:target a, #Cultivation:target p{
+	display:block;
+}
+#Technique:target a, #Technique:target p{
+	display:block;
+}
+#Esper:target a, #Esper:target p{
+	display:block;
+}
+#Awakening:target a, #Awakening:target p{
+	display:block;
+}
+#Kinds:target a, #Kinds:target p{
+	display:block;
+}
+#Race:target a, #Race:target p{
+	display:block;
+}
+#Social:target a, #Social:target p{
+	display:block;
+}
+#Setting:target a, #Setting:target p{
+	display:block;
+}
