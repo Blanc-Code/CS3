@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			var rand = Math.floor( Math.random() * 1001 );
+			document.write( "Randomly generated number: " + rand);
+			if ( rand == 1000 ) {
+				document.write( "\nBreakdown: 1000" );
+			} else if ( rand >= 100 ) {
+				document.write( "\nBreakdown: " + Math.floor( rand / 100 ) * 100 );
+				if ( (rand % 100) >= 10 ) {
+					document.write( " " + Math.floor( (rand % 100) / 10 ) * 10 );
+					if ( (rand % 10) != 0) {
+						document.write( " " + rand % 10 );
+					}
+				} else if ( (rand % 10) != 0) {
+					document.write( " " + rand % 10 );
+				}
+			} else if ( rand >= 10 ) {
+				document.write( "\nBreakdown: " + Math.floor( rand / 10 ) * 10 );
+				if ( (rand % 10) != 0 ) {
+					document.write( " " + rand % 10 );
+				}
+			} else {
+				document.write( "\nBreakdown: " + rand);
+			}
+		</script>
+	</body>
+</html>
