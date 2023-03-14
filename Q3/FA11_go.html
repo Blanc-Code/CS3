@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			triangle();
+			function triangle() {
+				var a = prompt( "Enter the value of one side of the triangle", "0" );
+				var b = prompt( "Enter the value of one side of the triangle", "0" );
+				var c = prompt( "Enter the value of one side of the triangle", "0" );
+				determineTriangle( a, b, c );
+			}
+			function determineTriangle( a, b, c ) {
+				if ( a == b && b == c ) {
+					alert("The triangle is EQUILATERAL");
+				} else if ( a == b || b == c || a == c ) {
+					alert("The triangle is ISOSCELES");
+				} else {
+					alert("The triangle is SCALENE");
+				}
+			}
+		</script>
+	</body>
+</html>
