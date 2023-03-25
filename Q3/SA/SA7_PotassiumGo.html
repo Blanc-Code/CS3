@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Fortune Telling using Numerology">
+		<meta name="keywords" content="Fortune, Numerology, Name">
+		<meta name="author" content="Julius Go">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+	</head>
+	<body>
+		<h1> Your Fortune is in your name </h1>
+		<h2> Your Name is: <span id="thename"> </span></h2>
+		<h2> Today's fortune: <span id="fortune"> </span></h2>
+		
+		<button onclick="forTune()"> Click here to enter your name </button>
+		<script>
+			/* do not forget to include comments in your answer */
+			function forTune() {
+				var name = prompt ("Type down your full name", ""); // Asking for the name
+				thename.innerHTML = name; // Displaying the name
+				var char = name.length // Counting the length of the name into a variable
+				/* Checking if the length of the variable isn't somewhere between 0-9 */
+				while (char < 0 || char > 9) {
+					var add = 0;
+					var num = char.toString().length; // variable to determine the length of the number in char
+					/* This num is then used as the condition for adding the digits of the number together */
+					for (i=0; i < num ; i++) {
+						add += parseInt(char.toString()[i]); // Variable i will go through all the digits in char
+					}
+					char = add; // Char is then readjusted until it is between 0-9
+				}
+				/* This control group is then used to determine the fortune based on the resulting number */
+				switch (char) {
+					case 0:
+						fortune.innerHTML = "It is complete freedom but it does deal with personal choice and its risks";
+						break;
+					case 1:
+						fortune.innerHTML = "It is the capacity of independence but it does deal with burdens you carry yourself";
+						break;
+					case 2:
+						fortune.innerHTML = "It is the capacity of empathy but it does deal with the pain and suffering that come with it";
+						break;
+					case 3:
+						fortune.innerHTML = "It is the abundance of positivity but it does deal with how spent one will be once all that enthusiasm has vanished";
+						break;
+					case 4:
+						fortune.innerHTML = "It is the practice of discipline but it does underly the monotonous and unchanging";
+						break;
+					case 5:
+						fortune.innerHTML = "It is complete purity but it does tell of how easy it is to deviate and corrupt with slight change";
+						break;
+					case 6:
+						fortune.innerHTML = "It is the event of union but it does tell of overdependance or parasitic behaviour";
+						break;
+					case 7:
+						fortune.innerHTML = "It is the event of perfection but it does underly that the only way is now down";
+						break;
+					case 8:
+						fortune.innerHTML = "It is the abundance of peace but it does underly the pivot of balance underneath could tip the scales";
+						break;
+					case 9:
+						fortune.innerHTML = "It is the practice of wisdom but it does tell of the scars and horror that better yet would have been ignorant about";
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

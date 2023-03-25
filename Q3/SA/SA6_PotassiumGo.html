@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Randomly Generated OTP">
+		<meta name="keywords" content="OTP, Verification, Random">
+		<meta name="author" content="Julius Go">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+	</head>
+	<body onload="OTP()">
+		<h1> Final Verification Step </h1>
+		<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="" onclick="OTP()"> New OTP </a></h2>
+		<button onclick="Pass()"> Enter the OTP as shown above </button>
+		
+		<script>
+			/* do not forget to include comments in your answer */
+			/* Make a variable that can be used in both functions. It is the OTP */
+			var cPass
+			/* Function that makes a random OTP that is exactly 6-digits */
+			function OTP() {
+				/* Defining OTP so that its value isn't undefined */
+				var OTP = "";
+				/* Random OTP Generator */
+				for (i=0;i<6;i++) {
+					var digit = Math.floor(Math.random() * 10);
+					OTP += digit;
+				}
+				/* Making the necessary changes/outputs */
+				otp.innerHTML = OTP;
+				cPass = OTP;
+			}
+			/* Function that asks, compares, and determines using the user's OTP */
+			function Pass() {
+				/* Asks for the OTP */
+				var uPass = parseInt(prompt("What is the password?", "000000"));
+				/* Compares the OTP with the Randomly Generated OTP */
+				if (uPass == cPass) {
+					alert ("Welcome new Beyonder. The Fool welcomes you.");
+					window.open ("https://www.reddit.com/r/LordofTheMysteries/");
+				} else {
+					alert ("This is not the password. Please try again");
+					OTP();
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Toss coin</title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Julius Go">
+		<meta name="keyword" content="Coin, Flip, Toss">
+		<meta name="description" content="Heads or Tails">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: navy; 
+            	text-align: center;
+            	font-family: arial;
+                color: white;
+            }
+            button {padding: 10px; background:violet }
+            span {color: yellow}
+            #coin, h5 {color: yellow; }
+            #coin { background: gray; 
+            	width: 25px; 
+                height: 25px;
+                padding: 25px;          
+                border: 5px dashed darkgray;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+        </style>
+	</head>
+	<body onload="getGuess()">
+        <h1> Heads or Tail? </h1>
+        <h2 onclick="getGuess()"> Click here to change your Guess: <span id="guess"> </span></h2>
+        <h2 id="coin" onclick="Flip()"> H </span></h2>   
+        <h5> Click on the coin above to randomly change its face and compare with your guess </h5> 
+        <script>
+            /* do not forget to include comments to this script */
+            var getGuess = function() {
+                uGuess = prompt("Type H for head and T for tail","H");
+                uGuess.toUpperCase; // converting to an uppercase letter
+                (uGuess != "H" && uGuess != "T") ?	alert("Wrong Input"):
+                    guess.innerHTML = uGuess;
+            }
+			/* Calling a function to flip a coin and compare values */
+			function Flip() {
+				var coin = Math.floor(Math.random() * 2);
+				var cGuess;
+				/* Discerning if heads or tails */
+				if ( coin ) {
+					document.getElementById("coin").innerHTML = "H";
+					cGuess = "H";
+				} else {
+					document.getElementById("coin").innerHTML = "T";
+					cGuess = "T";
+				}
+				/* Discerning if the guess is right or wrong */
+				if ( cGuess == uGuess ) {
+					alert("Your guess is right");
+				} else {
+					alert("Your guess is wrong");
+				}
+			}
+        </script>
+	</body>
+</html>

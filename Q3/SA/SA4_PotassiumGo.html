@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Deprecation Calculator</title>
+		<!-- provide the necessary meta tags -->
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+
+	</head>
+	<body>
+		<h1> Car Depreciation Calculator </h1>
+		<h2> Your Car Model: <span id="model"> </span></h2>
+		<h2> Car Cost: <span id="cost"> </span></h2>
+		<h2> Age of your Car: <span id="age"> </span></h2>
+		<h2> Good Condition?: <span id="condition"> </span></h2>
+		<h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
+		
+		<button onclick="enterCar()"> Enter your Car information </button>
+		
+		<script>
+			/* do not forget to place comments on the script */
+			function enterCar() {
+				carmodel = prompt("Enter Car Model");
+				carcost = prompt("Enter Cost of the Car");
+				carage = prompt("How old is your car?");
+				good = confirm("In Good Condition? Ok for Yes / Cancel for No");
+				model.innerHTML = carmodel;
+				cost.innerHTML = carcost;
+				age.innerHTML = carage;
+				condition.innerHTML = (good) ? "Yes" : "No";
+				/* This had problems because it had to access the innerHTML so I edited it */
+				computeMarketValue(parseFloat(cost.innerHTML),parseFloat(age.innerHTML),good); // create this function 
+			}
+			function computeMarketValue(CMV, age, condition) {
+				/* Determine the price through the age */
+				if (age > 10) {
+					CMV = 70000.00;
+				} else if (age >= 8) {
+					CMV = 100000.00;
+				} else if (age >=5) {
+					CMV = CMV * .25;
+				} else {
+					CMV = CMV * .5;
+				}
+				/* Determine the price using the condition */
+				if (!condition) {
+					CMV = CMV - (CMV * .1);
+				}
+				/* Outputing */
+				currentvalue.innerHTML = CMV;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choose your Pokemon</title>
+		<!-- provide the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Julius Go">
+		<meta name="description" content="Selecting Pokemon">
+		<meta name="keywords" content="Pokemon, Select, Avatar">
+		<meta name="viewport" content="width=device-width, initital-scale=1.0">
+        <style>
+        	* { box-sizing: border-box; font-family: arial; color: white;}
+            div {background: navy;
+            	width: 30%; 
+                text-align:center;
+           		width:250px; 
+                height: 250px; 
+           		margin: 0 auto; 
+                border: 1px solid black;
+                padding-left:1px; 
+                background: navy;
+             }
+            img {width: 65px; 
+            	height:74px; 
+                border: 1px solid black; 
+                float:left; 
+                margin: 1px
+            }
+			img:first-of-type {	/*pertaining to pikachu*/
+            	width: 100px; 
+                height: 150px; 
+                border: 1px solid black; 
+                background: lavender; 
+                padding-left: 10px; 
+                margin-right:10px
+            }
+			img:hover{cursor:pointer;
+            	background: lavender; 
+            }
+        </style>
+	</head>
+	<body>
+        <div>
+			<h2> Choose your Pokemon </h2>
+			<img id="avatar" src="https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/pikachu-f.png" title="Pikachu" onclick="cPix(this)" />
+			<img src="https://img.pokemondb.net/sprites/black-white/shiny/ninetales.png" title="Ninetales" onclick="cPix(this)" />
+			<img src="https://img.pokemondb.net/sprites/black-white/normal/dragonite.png" title="Dragonite" onclick="cPix(this)" />
+			<img src="https://img.pokemondb.net/sprites/x-y/normal/ivysaur.png" title="Ivysaur" onclick="cPix(this)" />
+			<img src="https://img.pokemondb.net/sprites/x-y/shiny/wigglytuff.png" title="Wigglytuff" onclick="cPix(this)" />
+		</div>
+        <script>
+            /* do not forget to include comments to this script */
+			function cPix(img) {
+				/* Place the img src and title into a variable */
+				var pokeSrc = img.src;
+				var pokeTitle = img.title;
+				/* Place the avatar img src and title into the img */
+				img.src = document.getElementById("avatar").src;
+				img.title = document.getElementById("avatar").title;
+				/* Place the variable src and title into the avatar img */
+				document.getElementById("avatar").src = pokeSrc;
+				document.getElementById("avatar").title = pokeTitle;
+			}
+        </script>
+	</body>
+</html>

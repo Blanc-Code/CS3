@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> My Online Shop</title>
+		<!-- type in the necessary meta tags -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Shopping and Bills">
+		<meta name="keywords" content="Shop, Mysteries, Potion">
+		<meta name="author" content="Julius Go">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			span {color: blue; text-decoration:underline}
+			button {width: 100px; padding: 5px; background: pink;}
+		</style>
+	</head>
+	<body>
+		<h1> Welcome to My Mysteries Shop </h1>
+		<h2> Please select from the following items </h2>
+		<!--- provide your own 3 items and their prices in the list --->
+		<ol>
+			<li> 1. Seer Potion price: 1000.00 </li>
+			<li> 2. Marauder Potion price: 500.00 </li>
+			<li> 3. Apprentice Potion price: 250.00 </li>
+		</ol>
+		<!-- the following will be used to display purchase information -->
+		<p> Item selected : <span id="item"> </span> </p>
+		<p> Qty bought : <span id="qty"> </span> </p>
+		<p> Amount to pay for the item: <span id="bill"> </span> </p>
+		<p> Current Total Bill <span id="tbill"> </span> </p>
+		<button onclick="Buy()"> Buy an Item </button>
+		<button onclick="Clear()"> Clear </button>
+		
+		<script>
+			/* do not forget to include comments in your answer */
+			var Total = 0; // Making the variable Total outside the function so as to not call/reset its value
+			/* function to buy items */
+			function Buy() {
+				/* Getting the item and qty */
+				var Item = prompt("Choose an item by their number", "0");
+				var Qty = prompt ("Decide on the number items", "0");
+				/* verify the input */
+				if (Qty % 1 != 0 || Item % 1 != 0 || Item < 1 || Item > 3) {
+					alert("This is invalid, terminating process...");
+				} else {
+					/* determine the price using the input */
+					var Price;
+					switch (Item) {
+						case "1":
+							item.innerHTML = "Seer Potion";
+							Price = 1000.00;
+							break;
+						case "2":
+							item.innerHTML = "Marauder Potion";
+							Price = 500.00;
+							break;
+						case "3":
+							item.innerHTML = "Apprentice Potion";
+							Price = 250.00;
+							break;
+					}
+					/* Calculate the price and total bill so far */
+					qty.innerHTML = Qty;
+					var Amount = Qty * Price;
+					bill.innerHTML = Amount;
+					Total = Total + Amount;
+					tbill.innerHTML = Total;
+				}
+			}
+			/* function to reset everything */
+			function Clear() {
+				item.innerHTML = "";
+				qty.innerHTML = "";
+				bill.innerHTML = "";
+				Total = 0;
+				tbill.innerHTML = "";
+			}
+		</script>
+	</body>
+</html>
