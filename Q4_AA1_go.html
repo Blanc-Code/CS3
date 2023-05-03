@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		
+		<input type="text" id="geneRna">
+		
+		<button onclick="readGene(geneRna.value)">Scan Rna</button>
+		
+		<script>
+			function readGene(Rna) {
+				var codStart = Rna.indexOf("AUG");
+				var codRna = "";
+				var codon = [];
+				var codE = 0;
+				
+				if ( codStart == -1 ) {
+					document.write("There is no AUG codon found");
+					return;
+				}
+				
+				while (codStart < Rna.length){
+					codRna += (Rna[codStart]);
+					codStart++;
+				}
+				
+				while ( stopA != 0 && stopB != 0 && stopC != 0 ) {
+					codon.push(codRna.slice(0, 3));
+					var codStart = 3;
+					var codCut = "";
+					while (codStart < codRna.length) {
+						codCut += (codRna[codStart]);
+						codStart++;
+					}
+					codRna = codCut;
+					var stopA = codRna.indexOf("UAG");
+					var stopB = codRna.indexOf("UGA");
+					var stopC = codRna.indexOf("UAA");
+					
+					if ( stopA == -1 && stopB == -1 && stopC == -1 ) {
+						document.write("There is no STOP codon found");
+						return;
+					}
+				}
+				codon.push(codRna.slice(0, 3));
+				document.write(codon);
+				
+				while ( codE < codon.length ) {
+					switch (codon[codE]) {
+						case "UUU":
+						case "UUC":
+							document.write( "<br>" + codon[codE] + " --> Phe" );
+							break;
+						case "UUA":
+						case "UUG":
+						case "CUU":
+						case "CUC":
+						case "CUA":
+						case "CUG":
+							document.write( "<br>" + codon[codE] + " --> Leu" );
+							break;
+						case "AUU":
+						case "AUC":
+						case "AUA":
+							document.write( "<br>" + codon[codE] + " --> Ile" );
+							break;
+						case "AUG":
+							document.write( "<br>" + codon[codE] + " --> Met" );
+							break;
+						case "GUU":
+						case "GUC":
+						case "GUA":
+						case "GUG":
+							document.write( "<br>" + codon[codE] + " --> Val" );
+							break;
+						case "UCU":
+						case "UCC":
+						case "UCA":
+						case "UCG":
+						case "AGU":
+						case "AGC":
+							document.write( "<br>" + codon[codE] + " --> Ser" );
+							break;
+						case "CCU":
+						case "CCC":
+						case "CCA":
+						case "CCG":
+							document.write( "<br>" + codon[codE] + " --> Pro" );
+							break;
+						case "ACU":
+						case "ACC":
+						case "ACA":
+						case "ACG":
+							document.write( "<br>" + codon[codE] + " --> Thr" );
+							break;
+						case "GCU":
+						case "GCC":
+						case "GCA":
+						case "GCG":
+							document.write( "<br>" + codon[codE] + " --> Ala" );
+							break;
+						case "UAU":
+						case "UAC":
+							document.write( "<br>" + codon[codE] + " --> Tyr" );
+							break;
+						case "UAA":
+						case "UAG":
+						case "UGA":
+							document.write( "<br>" + codon[codE] + " --> STOP" );
+							break;
+						case "CAU":
+						case "CAC":
+							document.write( "<br>" + codon[codE] + " --> His" );
+							break;
+						case "CAA":
+						case "CAG":
+							document.write( "<br>" + codon[codE] + " --> Gln" );
+							break;
+						case "AAU":
+						case "AAC":
+							document.write( "<br>" + codon[codE] + " --> Asn" );
+							break;
+						case "AAA":
+						case "AAG":
+							document.write( "<br>" + codon[codE] + " --> Lys" );
+							break;
+						case "GAU":
+						case "GAC":
+							document.write( "<br>" + codon[codE] + " --> Asp" );
+							break;
+						case "GAA":
+						case "GAG":
+							document.write( "<br>" + codon[codE] + " --> Glu" );
+							break;
+						case "UGU":
+						case "UGC":
+							document.write( "<br>" + codon[codE] + " --> Cys" );
+							break;
+						case "UGG":
+							document.write( "<br>" + codon[codE] + " --> Trp" );
+							break;
+						case "CGU":
+						case "CGC":
+						case "CGA":
+						case "CGG":
+						case "AGA":
+						case "AGG":
+							document.write( "<br>" + codon[codE] + " --> Arg" );
+							break;
+						case "GGU":
+						case "GGC":
+						case "GGA":
+						case "GGG":
+							document.write( "<br>" + codon[codE] + " --> Gly" );
+							break;
+					}
+					codE++;
+				}
+			}
+		</script>
+	</body>
+</html>
