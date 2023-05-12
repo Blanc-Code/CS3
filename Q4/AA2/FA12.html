@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+	<body>
+	
+	<input type="text" id="idCol">
+	<input type="text" id="idRow">
+	
+	<button onclick="multiTable(idCol.value,idRow.value)">Start</button>
+	
+	<script>
+		function multiTable(col,row) {
+			if ( col < 2 || col > 10 || col % 1 != 0 || row < 2 || row > 10 || row % 1 != 0 ) {
+				alert("Please enter numbers between 2 and 10");
+			} else {
+				var colCount = 0;
+				document.write("<table>");
+				while (colCount < col) {
+					colCount++;
+					document.write("<tr>");
+					var rowCount = 0;
+					while (rowCount < row) {
+						rowCount++;
+						multiple = colCount*rowCount;
+						document.write("<td>" + multiple + "</td>");
+					}
+					document.write("</tr>");
+				}
+				document.write("</table>");
+			}
+		}
+	</script>
+	
+	</body>
+</html>
